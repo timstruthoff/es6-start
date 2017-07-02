@@ -13,3 +13,23 @@ document.getElementById('calcBtn').addEventListener('click', function () {
     var monthlyPayment = calculateMonthlyPayment(principal, years, rate);
     document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
 });
+
+
+class Polygon {
+  constructor(hoehe, breite) {
+    this.hoehe = hoehe;
+    this.breite = breite;
+  }
+  
+  get flaeche() {
+    return this.berechneFlaeche();
+  }
+
+  berechneFlaeche() {
+    return this.hoehe * this.breite;
+  }
+}
+
+const quadrat = new Polygon(10, 10);
+
+console.log(quadrat.flaeche);
